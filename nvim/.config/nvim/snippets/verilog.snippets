@@ -1,0 +1,67 @@
+# module
+snippet mod "module" b 
+	module ${1}(
+		${2}
+	);
+		${0}
+	endmodule
+
+# always 
+snippet al "always" b 
+	always @(${1}) begin 
+		${2}
+	end
+	${0}
+
+# if 
+snippet if "always" b 
+	if(${1}) begin
+		${2}	
+	end
+	${0}
+
+# else 
+snippet el "always" b 
+	else begin
+		${1}	
+	end
+	${0}
+
+# else if 
+snippet ei "always" b 
+	else if(${1}) begin
+		${2}	
+	end
+	${0}
+	
+# clock generator
+snippet clk "generator clock" b 
+	// periodic time
+	initial begin
+		clk<=0;
+		count<=0;
+		forever begin 
+		  #1; clk<=~clk;
+		end
+  	end
+
+# case stagements
+snippet ca "case" b 
+	case(${1}) 
+		${2}
+		default: ${0}
+	endcase
+
+# get waveforms
+snippet wave "get waveforms" b 
+	// generate waveforms
+	initial begin
+	  \$dumpfile("${1}_tb.vcd");
+	  \$dumpvars(0, ${2:$1}_tb);
+	end
+
+# implementation 
+snippet imp "get waveforms" b 
+	// =========================================================================
+	// ============================ implementation =============================
+	// =========================================================================
