@@ -159,10 +159,15 @@ alias icloud="cd /Users/fujie/Library/Mobile\ Documents/3L68KQB4HG~com~readdle~C
 alias c="clear"
 alias szsh='source ~/.zshrc'
 alias gs='git status'
+alias gm='git merge'
 alias ga='git add'
 alias gaa='git add --all'
 alias gc='git commit -m'
 alias gp='git push'
+alias gch='git checkout'
+alias gcb='git checkout -b'
+alias gbd='git branch --delete'
+alias gbD='git branch --delete --force'
 alias gitlog='git log --all --graph --pretty=format:"%Cred%h%Creset %C(bold blue)%an%Creset %s %Cgreen(%cr) %Creset" --abbrev-commit'
 eval $(thefuck --alias)
 
