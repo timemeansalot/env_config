@@ -1,4 +1,4 @@
-# config for linux only
+# config for Linux only
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -121,26 +121,27 @@ export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
 # nvm using china repo
 
 
-# Java
-export JAVA_HOME=/opt/Java/jdk-19.0.1.jdk/Contents/Home
+# Java for Mac
+# export JAVA_HOME=/opt/Java/jdk-19.0.1.jdk/Contents/Home
+# export PATH=$JAVA_HOME/bin:$PATH:.
+
+# Java for Ubuntu 
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH:.
-
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/fujie/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/fujie/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/fujie/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/fujie/miniconda3/bin:$PATH"
+        export PATH="/opt/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-conda activate learn
 # <<< conda initialize <<<
 
 
@@ -157,7 +158,7 @@ alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.
 alias unproxy="unset http_proxy && unset https_proxy && unset all_proxy"
 alias work="cd /Users/fujie/Desktop/Developer/git_repos"
 alias icloud="cd /Users/fujie/Library/Mobile\ Documents/3L68KQB4HG~com~readdle~CommonDocuments/Documents"
-alias rtl="cd /Users/fujie/Desktop/Developer/git_repos/FAST_INTR_CPU/src/rtl"
+alias rtl="cd /home/fujie/Developer/git_repos/FAST_INTR_CPU/src/rtl"
 alias c="clear"
 alias szsh='source ~/.zshrc'
 alias gs='git status'
@@ -193,3 +194,7 @@ export PATH="/opt/homebrew/opt/riscv-openocd/bin:$PATH"
 # export CPATH=/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH:$rtlPath:.
 # export CPATH=/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH:.
 export CPATH=.:/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH
+
+
+# color scheme, Ubuntu Only
+eval `dircolors /home/fujie/.dir_colors/dircolors`
