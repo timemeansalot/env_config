@@ -121,10 +121,6 @@ export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
 # nvm using china repo
 
 
-# Java for Mac
-# export JAVA_HOME=/opt/Java/jdk-19.0.1.jdk/Contents/Home
-# export PATH=$JAVA_HOME/bin:$PATH:.
-
 # Java for Ubuntu 
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH:.
