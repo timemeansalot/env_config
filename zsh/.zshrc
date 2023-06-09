@@ -156,6 +156,7 @@ alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.
 alias unproxy="unset http_proxy && unset https_proxy && unset all_proxy"
 alias work="cd /Users/fujie/Desktop/Developer/git_repos"
 alias icloud="cd /Users/fujie/Library/Mobile\ Documents/3L68KQB4HG~com~readdle~CommonDocuments/Documents"
+alias rtl="cd /Users/fujie/Desktop/Developer/git_repos/FAST_INTR_CPU/src/rtl"
 alias c="clear"
 alias szsh='source ~/.zshrc'
 alias gs='git status'
