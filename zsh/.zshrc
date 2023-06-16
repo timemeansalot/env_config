@@ -139,6 +139,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+conda activate chisel
 
 
 # gtkwave & Perl Switch: allow `gtkwave` command works fine in terminal
