@@ -138,7 +138,7 @@ else
     fi
 fi
 unset __conda_setup
-conda activate learn
+conda activate chisel 
 # <<< conda initialize <<<
 
 
@@ -169,7 +169,6 @@ alias gcb='git checkout -b'
 alias gbd='git branch --delete'
 alias gbD='git branch --delete --force'
 alias gitlog='git log --all --graph --pretty=format:"%Cred%h%Creset %C(bold blue)%an%Creset %s %Cgreen(%cr) %Creset" --abbrev-commit'
-eval $(thefuck --alias)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -179,8 +178,8 @@ eval $(thefuck --alias)
 export NPC_HOME=/Users/fujie/Desktop/Developer/git_repos/ysyx-workbench/npc
 
 
-# RISCV
-
+# RISCV Configs 
+# export PATH=/opt/homebrew/opt/riscv-gnu-toolchain/bin/:$PATH
 # export RISCV=/Users/fujie/Desktop/Developer/RISCV/riscv64-unknown-elf-gcc-8.3.0-2020.04.0-x86_64-apple-darwin
 # export RISCV_BIN=/Users/fujie/Desktop/Developer/RISCV/riscv64-unknown-elf-gcc-8.3.0-2020.04.0-x86_64-apple-darwin/bin
 # # alias pk="/Users/fujie/Desktop/Developer/RISCV/riscv64-unknown-elf-gcc-8.3.0-2020.04.0-x86_64-apple-darwin/riscv32-unknown-elf/bin/pk"
