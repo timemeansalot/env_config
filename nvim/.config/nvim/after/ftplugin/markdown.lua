@@ -7,6 +7,11 @@ require("nvim-surround").buffer_setup({
         return { { "\\begin{" .. env .. "}" }, { "\\end{" .. env .. "}" } }
       end,
     },
+    ["["] = {
+      add = { "[", "]" },
+      find = "[.-]",
+      delete = "^([)().-(])()$",
+    },
     ["f"] = {
       add = { "**", "**" },
       find = "**.-**",
