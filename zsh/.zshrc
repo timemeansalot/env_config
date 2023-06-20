@@ -120,11 +120,6 @@ export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
 # nvm using china repo
 
-
-# Java home
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/fujie/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
