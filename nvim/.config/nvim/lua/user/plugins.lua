@@ -126,16 +126,13 @@ return packer.startup(function(use)
 			})
 		end,
 	})
-
-	-- true zen mode
+	-- nvim v0.8.0
 	use({
-		"Pocco81/true-zen.nvim",
-		config = function()
-			require("true-zen").setup({
-				-- your config goes here
-				-- or just leave it empty :)
-			})
-		end,
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
 	})
 	-- autolist
 	use({ "gaoDean/autolist.nvim" })

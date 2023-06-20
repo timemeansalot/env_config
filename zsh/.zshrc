@@ -122,8 +122,8 @@ export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
 
 
 # Java home
-export JAVA_HOME=/opt/Java/jdk-19.0.1.jdk/Contents/Home
-export PATH=$JAVA_HOME/bin:$PATH:.
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
