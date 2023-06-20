@@ -184,3 +184,6 @@ export PATH="/opt/homebrew/opt/riscv-openocd/bin:$PATH"
 # export CPATH=/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH:$rtlPath:.
 # export CPATH=/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH:.
 export CPATH=.:/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH
+
+# JAVA
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home
