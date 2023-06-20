@@ -126,7 +126,6 @@ return packer.startup(function(use)
 			})
 		end,
 	})
-
 	-- autolist
 	use({ "gaoDean/autolist.nvim" })
 	-- latex
