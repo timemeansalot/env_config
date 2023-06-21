@@ -187,3 +187,5 @@ export CPATH=.:/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPA
 
 # JAVA
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home
+# Python
+alias python="python3"
