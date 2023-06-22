@@ -187,11 +187,18 @@ export NPC_HOME=/Users/fujie/Desktop/Developer/git_repos/ysyx-workbench/npc
 #
 # export PATH=$PATH:$RISCV_BIN
 export PATH="/opt/homebrew/opt/riscv-openocd/bin:$PATH"
-# verilator header files
-# export CPATH=/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH:$rtlPath:.
-# export CPATH=/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH:.
-export CPATH=.:/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH
+# verilator header files in linux
+export CPATH=.:/usr/local/share/verilator/include:$CPATH
+
 
 
 # color scheme, Ubuntu Only
 eval `dircolors /home/fujie/.dir_colors/dircolors`
+
+# long arch
+export CHIPLAB_HOME=/home/fujie/Developer/git_repos/chiplab
+export PATH=${CHIPLAB_HOME}/toolchains/loongarch32r-linux-gnusf-2022-05-20/bin/:$PATH 
+
+# RISCV 
+export NOOP_HOME="/home/fujie/Developer/git_repos/verilog_diff/build/"
+export NEMU_HOME="/home/fujie/Developer/git_repos/verilog_diff/NEMU/"
