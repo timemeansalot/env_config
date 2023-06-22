@@ -186,6 +186,12 @@ export PATH="/opt/homebrew/opt/riscv-openocd/bin:$PATH"
 export CPATH=.:/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH
 
 # JAVA
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home
+export PATH=/opt/homebrew/opt/openjdk@11/bin:$PATH
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
+export JAVA_HOME=/opt/homebrew/opt/openjdk@11
 # Python
 alias python="python3"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
