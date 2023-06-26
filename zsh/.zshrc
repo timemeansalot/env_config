@@ -200,5 +200,9 @@ export CHIPLAB_HOME=/home/fujie/Developer/git_repos/chiplab
 export PATH=${CHIPLAB_HOME}/toolchains/loongarch32r-linux-gnusf-2022-05-20/bin/:$PATH 
 
 # RISCV 
+export CPATH=.:/usr/include/SDL2/:$CPATH
 export NOOP_HOME="/home/fujie/Developer/git_repos/verilog_diff/build/"
-export NEMU_HOME="/home/fujie/Developer/git_repos/verilog_diff/NEMU/"
+# export NEMU_HOME="/home/fujie/Developer/git_repos/verilog_diff/NEMU/"
+
+export NPC_HOME=/home/fujie/Developer/git_repos/ysyx-workbench/npc
+export NEMU_HOME=/home/fujie/Developer/git_repos/ysyx-workbench/nemu
