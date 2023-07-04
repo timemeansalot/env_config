@@ -21,19 +21,19 @@ export PATH=$JAVA_HOME/bin:$PATH:.
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/fujie/app/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/fujie/app/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/fujie/app/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/miniconda3/bin:$PATH"
+        export PATH="/home/fujie/app/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-conda activate chisel
+# conda activate chisel
 
 
 # gtkwave & Perl Switch: allow `gtkwave` command works fine in terminal
@@ -65,9 +65,10 @@ eval $(thefuck --alias)
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # color scheme, Ubuntu Only
-eval `dircolors /home/fujie/.dir_colors/dircolors`
+# eval `dircolors /home/fujie/.dir_colors/dircolors`
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # long arch
-export CHIPLAB_HOME=/home/fujie/Developer/git_repos/chiplab
-export PATH=${CHIPLAB_HOME}/toolchains/loongarch32r-linux-gnusf-2022-05-20/bin/:$PATH 
-export CPATH=.:/usr/include/SDL2/:$CPATH
+# export CHIPLAB_HOME=/home/fujie/Developer/git_repos/chiplab
+# export PATH=${CHIPLAB_HOME}/toolchains/loongarch32r-linux-gnusf-2022-05-20/bin/:$PATH 
+# export CPATH=.:/usr/include/SDL2/:$CPATH
