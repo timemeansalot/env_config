@@ -56,19 +56,18 @@ return packer.startup(function(use)
 	use({ "lukas-reineke/indent-blankline.nvim"})
 	use({ "goolord/alpha-nvim"})
 	use({ "folke/which-key.nvim"})
---
---	-- Colorschemes
---	use({ "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" })
---	use({ "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" })
---	--use({ "catppuccin/nvim", as = "catppuccin" })
---	--use({
---	--	"neanias/everforest-nvim",
---	--	-- Optional; default configuration will be used if setup isn't called.
---	--	config = function()
---	--		require("everforest").setup()
---	--	end,
---	--})
---	use("Mofiqul/dracula.nvim")
+	-- Colorschemes
+	use({ "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" })
+	use({ "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" })
+	use({ "catppuccin/nvim", as = "catppuccin" })
+	--use({
+	--	"neanias/everforest-nvim",
+	--	-- Optional; default configuration will be used if setup isn't called.
+	--	config = function()
+	--		require("everforest").setup()
+	--	end,
+	--})
+	use("Mofiqul/dracula.nvim")
 --
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" }) -- The completion plugin
@@ -78,31 +77,30 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-nvim-lsp", commit = "3cf38d9c957e95c397b66f91967758b31be4abe6" })
 	use({ "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" })
 
---	-- Snippets
---	use({ "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }) --snippet engine
---	use({ "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" }) -- a bunch of snippets to use
---
---	-- LSP
---	use({ "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" }) -- config each lsp server
---	use({ "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12" }) -- simple to use language server installer
---	use({ "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }) -- use LspInstall to install LSP.
---	use({ "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" }) -- for formatters and linters
---	use({ "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" })
---
---	-- Telescope
---	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })
---
--- Treesitter
-use({
-	"nvim-treesitter/nvim-treesitter",
-})
---
+	-- Snippets
+	use({ "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }) --snippet engine
+	use({ "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" }) -- a bunch of snippets to use
+
+	-- LSP
+	use({ "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" }) -- config each lsp server
+	use({ "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12" }) -- simple to use language server installer
+	use({ "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }) -- use LspInstall to install LSP.
+	use({ "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" }) -- for formatters and linters
+	use({ "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" })
+
+	-- Telescope
+	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })
+
+--  Treesitter
+    use({
+        "nvim-treesitter/nvim-treesitter",
+    })
 --	-- Git
---	use({ "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" })
+	use({ "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" })
 --	-- markdown-preview
---	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }) -- enable markdown preview in markdown files.
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }) -- enable markdown preview in markdown files.
 --	-- max split window
---	use("szw/vim-maximizer") -- maximizes and restores current windowuse('MunifTanjim/prettier.nvim')
+	use("szw/vim-maximizer") -- maximizes and restores current windowuse('MunifTanjim/prettier.nvim')
 
 	-- picgo
 --	use({
@@ -114,20 +112,20 @@ use({
 --	})
 
 	-- better navigator, use ctrl, i,j,k,l to move between different windowus
---	use("christoomey/vim-tmux-navigator")
+	use("christoomey/vim-tmux-navigator")
 
 	-- nvim-surround
---	use({
---		"kylechui/nvim-surround",
---		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
---		config = function()
---			require("nvim-surround").setup({
---				-- Configuration here, or leave empty to use defaults
---			})
---		end,
---	})
+	use({
+		"kylechui/nvim-surround",
+		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	})
 	-- autolist
-	--use({ "gaoDean/autolist.nvim" })
+	use({ "gaoDean/autolist.nvim" })
 	-- latex
 	--use("lervag/vimtex")
 	-- undo tree, see all file changes and undo the changes
