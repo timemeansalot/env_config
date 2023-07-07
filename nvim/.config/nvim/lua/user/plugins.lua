@@ -130,6 +130,8 @@ return packer.startup(function(use)
 	use({ "gaoDean/autolist.nvim" })
 	-- latex
 	use("lervag/vimtex")
+    -- toggle box
+    use("opdavies/toggle-checkbox.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

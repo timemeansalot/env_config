@@ -68,5 +68,4 @@ keymap("v", "<leader>zn", ":'<,'>TZNarrow<CR>", {})
 keymap("n", "<leader>zf", ":TZFocus<CR>", {})
 keymap("n", "<leader>zm", ":TZMinimalist<CR>", {})
 keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
--- undotree
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>x", ":lua require('toggle-checkbox').toggle()<CR>")
