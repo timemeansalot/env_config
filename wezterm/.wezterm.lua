@@ -15,7 +15,7 @@ config.color_scheme = 'AdventureTime'
 -- config.color_scheme = 'Hardcore'
 config.font = wezterm.font('MesloLGS NF')
 config.line_height = 1.2
-config.font_size = 12
-config.window_background_opacity = 0.9 -- set a little transparency
+config.font_size = 10
+config.window_background_opacity = 0.8 -- set a little transparency
 -- and finally, return the configuration to wezterm
 return config
