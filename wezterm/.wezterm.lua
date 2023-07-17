@@ -16,6 +16,8 @@ config.color_scheme = 'AdventureTime'
 config.font = wezterm.font('MesloLGS NF')
 config.line_height = 1.2
 config.font_size = 13
-config.window_background_opacity = 0.8 -- set a little transparency
+config.window_background_opacity = 0.85 -- set a little transparency
 -- and finally, return the configuration to wezterm
+-- default shell
+-- config.default_prog = { '/usr/bin/zsh'}
 return config

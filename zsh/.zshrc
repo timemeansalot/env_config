@@ -73,7 +73,3 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # export CHIPLAB_HOME=/home/fujie/Developer/git_repos/chiplab
 # export PATH=${CHIPLAB_HOME}/toolchains/loongarch32r-linux-gnusf-2022-05-20/bin/:$PATH 
 # export CPATH=.:/usr/include/SDL2/:$CPATH
-
-# sogou input 
-export XMODIFIERS="@im=fcitx"
-export QT_IM_MODULE="fcitx"
