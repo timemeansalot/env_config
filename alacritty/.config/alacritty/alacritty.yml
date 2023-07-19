@@ -3,7 +3,8 @@ live_config_reload: true
 # Tab 缩进
 tabspaces: 4
 # 背景透明度
-window.opacity: 0.8 
+# window.opacity: 0.8 
+background_opacity: 0.8
 
 shell:
   program: /bin/zsh
@@ -41,7 +42,7 @@ scrolling:
   # 自动滚动至最新行
   auto_scroll: true
 font:
-  size: 16
+  size: 14
   # 字体
   normal:
     family: 'MesloLGS NF'
