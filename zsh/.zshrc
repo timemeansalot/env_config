@@ -143,9 +143,9 @@ PERL_LOCAL_LIB_ROOT="/Users/fujie/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_
 PERL_MB_OPT="--install_base \"/Users/fujie/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/fujie/perl5"; export PERL_MM_OPT;
 
-alias gktwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
-alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
-"
+alias pst="cd ~/Developer/git_repos/SourceFiles/hexo-site/source/_posts/"
+alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
+alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
 alias unproxy="unset http_proxy && unset https_proxy && unset all_proxy"
 alias work="cd /Users/fujie/Desktop/Developer/git_repos"
 alias icloud="cd /Users/fujie/Library/Mobile\ Documents/3L68KQB4HG~com~readdle~CommonDocuments/Documents"
@@ -171,13 +171,6 @@ alias gitlog='git log --all --graph --pretty=format:"%Cred%h%Creset %C(bold blue
 # ysyx
 export NPC_HOME=/Users/fujie/Desktop/Developer/git_repos/ysyx-workbench/npc
 
-
-# RISCV Configs 
-# export PATH=/opt/homebrew/opt/riscv-gnu-toolchain/bin/:$PATH
-# export RISCV=/Users/fujie/Desktop/Developer/RISCV/riscv64-unknown-elf-gcc-8.3.0-2020.04.0-x86_64-apple-darwin
-# export RISCV_BIN=/Users/fujie/Desktop/Developer/RISCV/riscv64-unknown-elf-gcc-8.3.0-2020.04.0-x86_64-apple-darwin/bin
-# # alias pk="/Users/fujie/Desktop/Developer/RISCV/riscv64-unknown-elf-gcc-8.3.0-2020.04.0-x86_64-apple-darwin/riscv32-unknown-elf/bin/pk"
-#
 # export PATH=$PATH:$RISCV_BIN
 export PATH="/opt/homebrew/opt/riscv-openocd/bin:$PATH"
 # verilator header files
@@ -186,8 +179,8 @@ export PATH="/opt/homebrew/opt/riscv-openocd/bin:$PATH"
 export CPATH=.:/opt/homebrew/Cellar/verilator/5.006/share/verilator/include:$CPATH
 
 # JAVA
-export PATH=/opt/homebrew/opt/openjdk@11/bin:$PATH
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
+# export PATH=/opt/homebrew/opt/openjdk@11/bin:$PATH
+# export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
 export JAVA_HOME=/opt/homebrew/opt/openjdk@11
 # Python
 alias python="python3"
@@ -195,3 +188,9 @@ alias python="python3"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# RISCV 
+export NOOP_HOME="/Users/fujie/Developer/git_repos/difftest_repos/verilog_diff/build"
+export NEMU_HOME="/Users/fujie/Developer/git_repos/difftest_repos/verilog_diff/NEMU"
+export CPATH=.:..:../common:$CPATH
+export PATH="/opt/homebrew/opt/perl@5.18/bin:$PATH"
