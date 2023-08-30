@@ -9,8 +9,10 @@ export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_pr
 #################################################################################################
 # Optional: install nvidia-driver
 # sudo ubuntu-drivers autoinstall && sudo reboot now
-# install necessary library
 sudo apt update
+# tools
+sudo apt install flameshot -y
+# install necessary library
 sudo apt install proxychains4 shadowsocks-libev vim wget git tmux make gcc time curl libreadline6-dev libsdl2-dev gcc-riscv64-linux-gnu openjdk-11-jre zlib1g-dev device-tree-compiler flex autoconf bison sqlite3 libsqlite3-dev -y
 sudo apt-get install perl python3 make autoconf g++ flex bison clang -y
 sudo apt-get install libgoogle-perftools-dev numactl perl-doc -y
@@ -34,7 +36,6 @@ sudo apt-get install libsdl2-dev -y        # a library used later
 sudo apt-get install llvm llvm-dev -y      # llvm project, which contains libraries used later
 # sudo apt-get install llvm-11 llvm-11-dev # only for ubuntu20.04
 # instal zsh git
-```bash
 sudo apt install zsh -y
 chsh -s /usr/bin/zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -42,7 +43,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 p10k configure
-```
 # config zsh from my config files
 sudo apt install stow -y
 cd ~
