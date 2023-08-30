@@ -75,4 +75,5 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # export CPATH=.:/usr/include/SDL2/:$CPATH
 
 # RISC-V
-export PATH=~/app/riscv-prebuilt/bin:$PATH
+export RISCV_HOME=/opt/riscv
+export PATH=$RISCV_HOME/bin:$PATH
