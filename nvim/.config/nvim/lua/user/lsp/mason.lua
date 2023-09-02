@@ -5,7 +5,7 @@ local servers = {
 	-- 'lua_ls', -- for lua
   'sumneko_lua', -- for lua
 	'clangd', -- for c, c++
-  'svlangserver', -- for verilog
+  -- 'svlangserver', -- for verilog
 }
 
 local settings = {
