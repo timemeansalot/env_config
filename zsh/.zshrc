@@ -75,4 +75,7 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # export CPATH=.:/usr/include/SDL2/:$CPATH
 
 # RISC-V
-export PATH=~/app/riscv-prebuilt/bin:$PATH
+export RISCV=~/app/riscv-prebuilt
+export PATH=$RISCV/bin:$PATH
+export CPATH=/usr/local/share/verilator/include 
+export PATH=$CPATH:$PATH

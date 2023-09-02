@@ -4,7 +4,7 @@ live_config_reload: true
 tabspaces: 4
 # 背景透明度
 # window.opacity: 0.8 
-background_opacity: 0.8
+# background_opacity: 0.7
 
 shell:
   program: /bin/zsh
@@ -27,7 +27,7 @@ window:
   # 窗口修饰
   # - full: 有边界 + 标题栏
   # - none: 无边界 + 标题栏
-  decorations: none
+  decorations: full 
 
 scrolling:
   # 历史保留行数
@@ -42,7 +42,7 @@ scrolling:
   # 自动滚动至最新行
   auto_scroll: true
 font:
-  size: 14
+  size: 10
   # 字体
   normal:
     family: 'MesloLGS NF'
