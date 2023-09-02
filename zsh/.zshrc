@@ -79,3 +79,13 @@ export RISCV=~/app/riscv-prebuilt
 export PATH=$RISCV/bin:$PATH
 export CPATH=/usr/local/share/verilator/include 
 export PATH=$CPATH:$PATH
+
+# YSYX
+export NVBOARD_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/nvboard
+export NPC_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/npc
+export NEMU_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/nemu
+export AM_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/abstract-machine
+
+# my hobby
+alias make="make -j `nproc` "
+alias vim="nvim"

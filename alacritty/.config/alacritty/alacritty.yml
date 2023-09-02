@@ -4,7 +4,7 @@ live_config_reload: true
 tabspaces: 4
 # 背景透明度
 # window.opacity: 0.8 
-# background_opacity: 0.7
+background_opacity: 0.8
 
 shell:
   program: /bin/zsh
