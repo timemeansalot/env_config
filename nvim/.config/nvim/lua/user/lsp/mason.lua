@@ -2,10 +2,10 @@
 -- system. server  <-->  client must coorperate.
 local servers = {
 	"texlab", -- for latex
-	-- 'lua_ls', -- for lua
-  'sumneko_lua', -- for lua
-	'clangd', -- for c, c++
-  -- 'svlangserver', -- for verilog
+	-- "lua_ls", -- for lua
+	"sumneko_lua", -- for lua
+	"clangd", -- for c, c++
+	"svlangserver", -- for verilog
 }
 
 local settings = {

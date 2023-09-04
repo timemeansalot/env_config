@@ -77,3 +77,12 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # RISC-V
 export RISCV_HOME=/opt/riscv
 export PATH=$RISCV_HOME/bin:$PATH
+
+# nvim executable
+export PATH=~/.cargo/bin:$PATH
+
+# YSYX
+export NPC_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/npc
+export NVBOARD_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/nvboard
+export NEMU_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/nemu
+export AM_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/abstract-machine
