@@ -72,11 +72,11 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # long arch
 # export CHIPLAB_HOME=/home/fujie/Developer/git_repos/chiplab
 # export PATH=${CHIPLAB_HOME}/toolchains/loongarch32r-linux-gnusf-2022-05-20/bin/:$PATH 
-# export CPATH=.:/usr/include/SDL2/:$CPATH
 
 # RISC-V
 export RISCV_HOME=/opt/riscv
 export PATH=$RISCV_HOME/bin:$PATH
+export CPATH=.:/usr/include/c++/11/:/usr/include/SDL2/:/usr/local/share/verilator/include/:$CPATH
 
 # nvim executable
 export PATH=~/.cargo/bin:$PATH
