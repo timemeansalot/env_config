@@ -86,3 +86,7 @@ export NPC_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/npc
 export NVBOARD_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/nvboard
 export NEMU_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/nemu
 export AM_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/abstract-machine
+
+# my hobby
+alias make="make -j `nproc` "
+alias vim="nvim"
