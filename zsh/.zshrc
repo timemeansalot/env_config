@@ -194,3 +194,6 @@ export NOOP_HOME="/Users/fujie/Developer/git_repos/difftest_repos/verilog_diff/b
 export NEMU_HOME="/Users/fujie/Developer/git_repos/difftest_repos/verilog_diff/NEMU"
 export CPATH=.:..:../common:$CPATH
 export PATH="/opt/homebrew/opt/perl@5.18/bin:$PATH"
+
+# my hobhy
+alias vim="nvim"
