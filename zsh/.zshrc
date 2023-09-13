@@ -92,3 +92,7 @@ export AM_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/abstract-mach
 # my hobby
 alias make="make -j `nproc` "
 alias vim="nvim"
+
+# ssh-agent connect
+eval `ssh-agent -s` > /dev/null
+eval `ssh-add ~/.ssh/time >/dev/null 2>&1` > /dev/null 2>&1
