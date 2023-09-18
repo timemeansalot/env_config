@@ -90,7 +90,7 @@ export NEMU_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/nemu
 export AM_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/abstract-machine
 
 # my hobby
-alias make="make -j `nproc` "
+# alias make="make -j `nproc` "
 alias vim="nvim"
 
 # ssh-agent connect
