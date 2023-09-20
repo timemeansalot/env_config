@@ -66,12 +66,12 @@ git clone https://github.com/verilator/verilator
 unset VERILATOR_ROOT  # For bash
 cd verilator
 # XiangShan uses Verilator v4.218
-# git checkout v4.218
+git checkout v4.218 # XiangShan Verilator Version
 autoconf        # Create ./configure script
 # Configure and create Makefile
 # ./configure CC=clang CXX=clang++ # We use clang as default compiler
 ./configure 
-make -j8        # Build Verilator itself
+make -j `nproc`        # Build Verilator itself
 sudo make install
 verilator --version
 
