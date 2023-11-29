@@ -3,9 +3,10 @@
 local servers = {
 	"texlab", -- for latex
 	-- 'lua_ls', -- for lua
-  'sumneko_lua', -- for lua
-	'clangd', -- for c, c++
-  'svlangserver', -- for verilog
+	"sumneko_lua", -- for lua
+	"clangd", -- for c, c++
+	"svlangserver", -- for verilog
+	"pyright",
 }
 
 local settings = {

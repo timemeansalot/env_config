@@ -144,6 +144,9 @@ PERL_MB_OPT="--install_base \"/Users/fujie/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/fujie/perl5"; export PERL_MM_OPT;
 
 alias pst="cd ~/Developer/git_repos/SourceFiles/hexo-site/source/_posts/"
+alias eserver="ssh jie@0.sh.cn.l.cysic.work -p 2222"
+alias iserver="ssh jie@10.233.10.80" # connect server in internal networ
+alias rtl="cd ~/Developer/git_repos/vga/src/rtl/"
 alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
 alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
 alias unproxy="unset http_proxy && unset https_proxy && unset all_proxy"
@@ -162,7 +165,7 @@ alias gch='git checkout'
 alias gcb='git checkout -b'
 alias gbd='git branch --delete'
 alias gbD='git branch --delete --force'
-alias gitlog='git log --all --graph --pretty=format:"%Cred%h%Creset %C(bold blue)%an%Creset %s %Cgreen(%cr) %Creset" --abbrev-commit'
+alias gitlog='git log --graph --oneline'  
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
