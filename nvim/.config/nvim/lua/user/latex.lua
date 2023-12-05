@@ -34,14 +34,17 @@ vim.g.vimtex_compiler_progname = "vimtex-compiler-latexrun" -- nvr is for nvim-r
 vim.g.tex_IgnoredWarnings = true
 
 -- vim.g.vimtex_view_method = "skim"
-vim.g.vimtex_compile_latexmk = {
+vim.g.vimtex_compiler_latexmk = {
   executable = "latexmk",
+  aux_dir="build",
+  out_dir="generated",
   OPTIONS = {
     "-xelatex",
     "-fine-line-error",
     "-synctex=1",
     "-interactions=nonstopmode",
   },
+  -- build_dir="build"
 }
 
 
