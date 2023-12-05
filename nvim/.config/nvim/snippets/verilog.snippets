@@ -45,6 +45,17 @@ snippet clk "generator clock" b
 		end
   	end
 
+# clock generator
+snippet genv "get generator" b 
+	parameter N=4;	
+	genvar i;
+	generate 
+		for (i=0;i<N;i=i+1) begin ${1} 
+		    // logic here
+			${2}	
+		end
+	endgenerate
+
 # case stagements
 snippet ca "case" b 
 	case(${1}) 

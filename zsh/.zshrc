@@ -147,7 +147,7 @@ alias pst="cd ~/Developer/git_repos/SourceFiles/hexo-site/source/_posts/"
 alias eserver="ssh jie@0.sh.cn.l.cysic.work -p 2222"
 alias iserver="ssh jie@10.233.10.80" # connect server in internal networ
 alias rtl="cd ~/Developer/git_repos/vga/src/rtl/"
-alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
+# alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
 alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
 alias unproxy="unset http_proxy && unset https_proxy && unset all_proxy"
 alias work="cd /Users/fujie/Desktop/Developer/git_repos"
@@ -199,4 +199,3 @@ export CPATH=.:..:../common:$CPATH
 export PATH="/opt/homebrew/opt/perl@5.18/bin:$PATH"
 
 # my hobhy
-alias vim="nvim"
