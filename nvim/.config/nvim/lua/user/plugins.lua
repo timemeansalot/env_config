@@ -136,6 +136,7 @@ return packer.startup(function(use)
 	use("opdavies/toggle-checkbox.nvim")
 	-- metals for scala
 	use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim" } })
+  use({ "pocco81/true-zen.nvim"})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

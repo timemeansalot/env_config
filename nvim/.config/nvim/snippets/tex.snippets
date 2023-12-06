@@ -110,11 +110,39 @@ snippet case "Cases"
 	\end{cases}${0}
 #
 
+# Chapter 
+snippet cha "Chapter" b
+	\newpage	
+	\chapter{${1:Name}}%
+		\label{cha:${2:$1}}
+		${0}
+#
+
+# Pictures 
+snippet pic "add pictures" b
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{${1}}
+		\caption{${3}}
+		\label{fig:${2}}
+	\end{figure}
+#
+
+	
+
 # Section
 snippet sec "Section" b
+	\newpage 
 	\section{${1:Name}}%
 		\label{sec:${2:$1}}
 		${0}
+#
+
+# Get Bib 
+snippet bib "get bib" b
+	\newpage
+	\bibliography{ref} % 参考文献源，存储所有的参考文献
+	\bibliographystyle{IEEEtran} % latex饮用参考文献时的格式
 #
 
 # Sub Section
@@ -163,6 +191,10 @@ snippet tt "Teletype" wi
 
 snippet bf "Bold" wi
 	\textbf{${1}}${0}
+#
+
+snippet cn "Chinese Compiler" wi
+	%!TEX program = xelatex
 #
 
 snippet sc "Small Caps" wi
