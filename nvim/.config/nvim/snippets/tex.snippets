@@ -113,14 +113,14 @@ snippet case "Cases"
 # Chapter 
 snippet cha "Chapter" b
 	\newpage	
-	\chapter{${1:Name}}%
+	\chapter{${1:Name}}
 		\label{cha:${2:$1}}
 		${0}
 #
 
 # Pictures 
 snippet pic "add pictures" b
-	\begin{figure}
+	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.8\linewidth]{${1}}
 		\caption{${3}}
@@ -133,7 +133,7 @@ snippet pic "add pictures" b
 # Section
 snippet sec "Section" b
 	\newpage 
-	\section{${1:Name}}%
+	\section{${1:Name}}
 		\label{sec:${2:$1}}
 		${0}
 #
@@ -147,35 +147,35 @@ snippet bib "get bib" b
 
 # Sub Section
 snippet sub "Sub Section" b
-	\subsection{${1:Name}}%
+	\subsection{${1:Name}}
 		\label{sub:${2:$1}}
 		${0}
 #
 
 # Sub Sub Section
 snippet ssub "Sub Sub Section" b
-	\subsubsection{${1:Name}}%
+	\subsubsection{${1:Name}}
 		\label{sub:${2:$1}}
 		${0}
 #
 
 # Hyper Section
 snippet hsec "Hyper Section" b
-	\hypsection{${1:Name}}%
+	\hypsection{${1:Name}}
 		\label{sec:${2:$1}}
 		${0}
 #
 
 # Hyper Sub Section
 snippet hsub "Hyper Sub Section" b
-	\hypsubsection{${1:Name}}%
+	\hypsubsection{${1:Name}}
 		\label{sub:${2:$1}}
 		${0}
 #
 
 # Hyper Sub Sub Section
 snippet hssub "Hyper Sub Sub Section" b
-	\hypsubsubsection{${1:Name}}%
+	\hypsubsubsection{${1:Name}}
 		\label{sub:${2:$1}}
 		${0}
 #
