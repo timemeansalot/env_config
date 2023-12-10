@@ -73,9 +73,9 @@ vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 -- check box
 vim.keymap.set("n", "<leader>x", ":lua require('toggle-checkbox').toggle()<CR>")
 
--- true zen-mode
-keymap("n", "<leader>zn", ":TZNarrow<CR>", {})
-keymap("v", "<leader>zn", ":'<,'>TZNarrow<CR>", {})
-keymap("n", "<leader>zf", ":TZFocus<CR>", {})
-keymap("n", "<leader>zm", ":TZMinimalist<CR>", {})
-keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
+-- open my config file like nvim and zshrc
+keymap("n", "<leader>mz", "<cmd>e ~/.zshrc<CR>", {desc="modify zshrc file"})
+keymap("n", "<leader>mn", "<cmd>e ~/.config/nvim/init.lua<CR>", {desc="modify nvim file"})
+keymap("n", "<leader>mt", "<cmd>e ~/.tmux.conf<CR>", {desc="modify tmux file"})
+keymap("n", "<leader>my", "<cmd>e ~/.config/yabai/yabairc<CR>", {desc="modify yabai file"})
+keymap("n", "<leader>ms", "<cmd>e ~/.config/skhd/skhdrc<CR>", {desc="modify skhd file"})
