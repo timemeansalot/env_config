@@ -114,13 +114,12 @@ snippet case "Cases"
 snippet cha "Chapter" b
 	\newpage	
 	\chapter{${1:Name}}
-		\label{cha:${2:$1}}
 		${0}
 #
 
 # Pictures 
 snippet pic "add pictures" b
-	\begin{figure}[ht]
+	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=0.8\linewidth]{${1}}
 		\caption{${3}}
@@ -134,7 +133,6 @@ snippet pic "add pictures" b
 snippet sec "Section" b
 	\newpage 
 	\section{${1:Name}}
-		\label{sec:${2:$1}}
 		${0}
 #
 
@@ -145,10 +143,24 @@ snippet bib "get bib" b
 	\bibliographystyle{IEEEtran} % latex饮用参考文献时的格式
 #
 
+
+snippet tab "create table" b
+	\begin{table}[H]
+		\caption{\textbf{table caption}}
+		\centering
+			\begin{tabular}{cc}
+				\label{tab:pc_flash}
+				\toprule
+				a & b\\\\
+				\midrule 
+				c & d\\\\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+
 # Sub Section
 snippet sub "Sub Section" b
 	\subsection{${1:Name}}
-		\label{sub:${2:$1}}
 		${0}
 #
 
