@@ -12,7 +12,7 @@ yabai -m config right_padding 0
 yabai -m config window_gap 0
 
 # center mouse on window with focus
-yabai -m config mouse_follows_focus on
+# yabai -m config mouse_follows_focus on
 
 # modifier for clicking and dragging with mouse
 yabai -m config mouse_modifier alt
@@ -31,3 +31,4 @@ yabai -m rule --add app="^Calender$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Xnip$" manage=off
