@@ -32,3 +32,4 @@ yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Xnip$" manage=off
+yabai -m rule --add app="^Messages$" manage=off

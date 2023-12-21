@@ -11,29 +11,31 @@ snippet al "always" b
 	always @(${1}) begin 
 		${2}
 	end
-	${0}
-
+# always resetn_reg
+snippet alr "always with resetn_reg" b 
+  always @(posedge aclk or negedge resetn_reg) begin 
+    if(resetn_reg) begin
+      ${1}
+    end
+    else begin
+			${2}
+    end
+  end
 # if 
 snippet if "always" b 
 	if(${1}) begin
 		${2}	
 	end
-	${0}
-
 # else 
 snippet el "always" b 
 	else begin
 		${1}	
 	end
-	${0}
-
 # else if 
 snippet ei "always" b 
 	else if(${1}) begin
 		${2}	
 	end
-	${0}
-	
 # clock generator
 snippet clk "generator clock" b 
 	// periodic time

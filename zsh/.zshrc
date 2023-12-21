@@ -198,4 +198,5 @@ export NEMU_HOME="/Users/fujie/Developer/git_repos/difftest_repos/verilog_diff/N
 export CPATH=.:..:../common:$CPATH
 export PATH="/opt/homebrew/opt/perl@5.18/bin:$PATH"
 
-# my hobhy
+# verilog 
+export PATH=/opt/homebrew/bin/iverilog:$PATH

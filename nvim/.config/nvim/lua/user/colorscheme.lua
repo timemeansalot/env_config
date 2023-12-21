@@ -143,8 +143,8 @@ dracula.setup({
 })
 
 -- setup must be called before loading
--- vim.cmd.colorscheme("dracula")
+vim.cmd.colorscheme("dracula")
 -- vim.cmd.colorscheme("everforest")
 -- vim.o.background="light" -- set light background for everforest
 -- vim.cmd.colorscheme "catppuccin"
-vim.cmd.colorscheme "tokyonight-day"
+-- vim.cmd.colorscheme "tokyonight-day"
