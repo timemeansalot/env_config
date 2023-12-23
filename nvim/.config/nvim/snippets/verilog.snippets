@@ -14,7 +14,7 @@ snippet al "always" b
 # always resetn_reg
 snippet alr "always with resetn_reg" b 
   always @(posedge aclk or negedge resetn_reg) begin 
-    if(resetn_reg) begin
+    if(~resetn_reg) begin
       ${1}
     end
     else begin
