@@ -76,7 +76,8 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # RISC-V
 export RISCV_HOME=/opt/riscv
 export PATH=$RISCV_HOME/bin:$PATH
-export CPATH=.:/usr/include/c++/11/:/usr/include/SDL2/:/usr/local/share/verilator/include/:$CPATH
+# export CPATH=.:/usr/include/c++/11/:/usr/include/SDL2/:/usr/local/share/verilator/include/:$CPATH
+export CPATH=~/Developer/git_repos/chipDesign/verilator/include/:$CPATH
 export CPATH=$NEMU_HOME/include/:$NEMU_HOME/src/isa/riscv32/include/:$CPATH
 export CPLUS_INCLUDE_PATH=/usr/include/c++/11:$CPLUS_INCLUDE_PATH
 
@@ -96,3 +97,6 @@ alias vim="nvim"
 # ssh-agent connect
 eval `ssh-agent -s` > /dev/null
 eval `ssh-add ~/.ssh/time >/dev/null 2>&1` > /dev/null 2>&1
+
+# Vivado
+source /tools/Xilinx/Vivado/2023.2/settings64.sh
