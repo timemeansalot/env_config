@@ -1,6 +1,4 @@
 live_config_reload = true
-# tabspaces = 4
-# use_thin_strokes = true
 
 [font]
 size = 12
@@ -9,21 +7,11 @@ size = 12
 family = "Agave Nerd Font Mono"
 style = "Bold"
 
-[font."bold_{i}talic"]
-family = "Agave Nerd Font Mono"
-style = "Bold Italic"
-
-# [font.italic]
-# family = "Agave Nerd Font Mono"
-# style = "Italic"
-
 [font.normal]
 family = "Agave Nerd Font Mono"
 style = "Regular"
 
 [scrolling]
-# auto_scroll = true
-# faux_multiplier = 100
 history = 2000
 multiplier = 20
 
