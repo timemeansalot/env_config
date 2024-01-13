@@ -1,0 +1,45 @@
+live_config_reload = true
+# tabspaces = 4
+# use_thin_strokes = true
+
+[font]
+size = 12
+
+[font.bold]
+family = "Agave Nerd Font Mono"
+style = "Bold"
+
+[font."bold_{i}talic"]
+family = "Agave Nerd Font Mono"
+style = "Bold Italic"
+
+# [font.italic]
+# family = "Agave Nerd Font Mono"
+# style = "Italic"
+
+[font.normal]
+family = "Agave Nerd Font Mono"
+style = "Regular"
+
+[scrolling]
+# auto_scroll = true
+# faux_multiplier = 100
+history = 2000
+multiplier = 20
+
+[shell]
+args = ["-l"]
+program = "/usr/bin/zsh"
+
+[window]
+decorations = "full"
+dynamic_padding = false
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 120
+lines = 60
+
+[window.padding]
+x = 10
+y = 15
