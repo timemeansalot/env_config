@@ -176,6 +176,21 @@ local mappings = {
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
+	y = {
+		name = "edit config files",
+		n = {
+			"<cmd>e ~/.config/nvim/init.lua<CR>",
+			"init.lua",
+		},
+		z = {
+			"<cmd>e ~/.zshrc<CR>",
+			".zshrc",
+		},
+		a = {
+			"<cmd>e ~/.config/alacritty/alacritty.toml<CR>",
+			"alacritty.toml",
+		},
+	},
 
 	T = {
 		name = "TEMPLATES",
