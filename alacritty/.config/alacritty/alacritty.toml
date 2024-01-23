@@ -1,15 +1,22 @@
 live_config_reload = true
 
+# themes
+import = ["~/.config/alacritty/themes/dracula/dracula.toml"]
+
 [font]
-size = 20 
+size = 16
 
 [font.bold]
-family = "Agave Nerd Font Mono"
+family = "Jet Brains Mono Nerd Font"
 style = "Bold"
 
 [font.normal]
-family = "Agave Nerd Font Mono"
+family = "Jet Brains Mono Nerd Font"
 style = "Regular"
+
+[font.italic]
+family = "Jet Brains Mono Nerd Font Italic"
+style = "italic"
 
 [scrolling]
 history = 2000
