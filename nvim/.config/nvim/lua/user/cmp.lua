@@ -17,9 +17,9 @@ end
 
 --   פּ ﯟ   some other good icons
 local kind_icons = {
-  Text = "",
-  Method = "m",
-  Function = "",
+  Text = "T",
+  Method = "M",
+  Function = "F",
   Constructor = "",
   Field = "",
   Variable = "",
@@ -30,18 +30,18 @@ local kind_icons = {
   Unit = "",
   Value = "",
   Enum = "",
-  Keyword = "",
+  Keyword = "K",
   Snippet = "",
   Color = "",
   File = "",
   Reference = "",
-  Folder = "",
+  Folder = "f",
   EnumMember = "",
-  Constant = "",
+  Constant = "C",
   Struct = "",
   Event = "",
-  Operator = "",
-  TypeParameter = "",
+  Operator = "O",
+  TypeParameter = "T",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
