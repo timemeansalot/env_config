@@ -190,6 +190,10 @@ local mappings = {
 			"<cmd>e ~/.config/alacritty/alacritty.toml<CR>",
 			"alacritty.toml",
 		},
+		t = {
+			"<cmd>e ~/.tmux.conf<CR>",
+			".tmux.config",
+		},
 	},
 
 	T = {
