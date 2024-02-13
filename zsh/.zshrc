@@ -144,8 +144,11 @@ PERL_MB_OPT="--install_base \"/Users/fujie/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/fujie/perl5"; export PERL_MM_OPT;
 
 alias pst="cd ~/Developer/git_repos/SourceFiles/hexo-site/source/_posts/"
-alias eserver="ssh jie@0.sh.cn.l.cysic.work -p 2222"
-alias iserver="ssh jie@10.233.10.80" # connect server in internal networ
+alias eserver="ssh jie@0.sh.cn.l.cysic.work -p 2222" # connect cysic server in external networ
+alias iserver="ssh jie@10.233.10.80" # connect cysic server in internal networ
+alias solar="ssh jie@solar-2.s.cysic.work -p 2223"
+alias aws="ssh ubuntu@3.101.15.174 -i ~/.ssh/ci-dispatcher.pem"
+alias lserver="ssh fujie@192.168.31.203" # local server
 alias rtl="cd ~/Developer/git_repos/vga/src/rtl/"
 # alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
 alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
