@@ -177,6 +177,26 @@ local mappings = {
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
 
+	y = {
+		name = "edit config files",
+		n = {
+			"<cmd>e ~/.config/nvim/init.lua<CR>",
+			"init.lua",
+		},
+		z = {
+			"<cmd>e ~/.zshrc<CR>",
+			".zshrc",
+		},
+		s = {
+			"<cmd>e ~/.config/skhd/skhdrc<CR>",
+			"skhd.toml",
+		},
+		t = {
+			"<cmd>e ~/.tmux.conf<CR>",
+			".tmux.config",
+		},
+	},
+
 	T = {
 		name = "TEMPLATES",
 		c = { "<cmd>PackerCompile<CR>", "Compile" },
