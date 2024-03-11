@@ -103,3 +103,5 @@ source /tools/Xilinx/Vivado/2023.2/settings64.sh
 alias eserver="ssh jie@0.sh.cn.l.cysic.work -p 2222"
 alias iserver="ssh jie@10.233.10.80" # connect server in internal networ
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+source ~/.profile
