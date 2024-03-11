@@ -4,22 +4,18 @@ live_config_reload = true
 import = ["~/.config/alacritty/themes/dracula/dracula.toml"]
 
 [font]
-size = 20
+size = 18
 
 [font.normal]
 family = "MesloLGS NF"
 
-# [font.bold]
-# family = "Jet Brains Mono Nerd Font"
-# style = "Bold"
+[font.bold]
+family = "MesloLGS NF"
+style = "Bold"
 
-# [font.normal]
-# family = "Jet Brains Mono Nerd Font"
-# style = "Regular"
-
-# [font.italic]
-# family = "Jet Brains Mono Nerd Font Italic"
-# style = "italic"
+[font.italic]
+family = "MesloLGS NF"
+style = "italic"
 
 [scrolling]
 history = 2000
@@ -33,7 +29,7 @@ program = "/usr/bin/zsh"
 decorations = "full"
 dynamic_padding = false
 startup_mode = "Maximized"
-# opacity = 0.8
+opacity = 0.85
 
 [window.dimensions]
 columns = 120
