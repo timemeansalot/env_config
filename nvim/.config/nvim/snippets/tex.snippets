@@ -127,6 +127,16 @@ snippet pic "add pictures" b
 	\end{figure}
 #
 
+
+snippet picd "add pictures" b
+	\begin{figure}[!ht]
+		\centering
+		\subfloat[]{\includegraphics[width=0.8\linewidth]{${1}}}\\
+		\subfloat[]{\includegraphics[width=0.8\linewidth]{}}
+		\caption{${3}}
+		\label{fig: ${2}}
+	\end{figure}
+
 	
 
 # Section
@@ -146,15 +156,15 @@ snippet bib "get bib" b
 
 snippet tab "create table" b
 	\begin{table}[H]
-		\caption{\textbf{table caption}}
-		\centering
-			\begin{tabular}{cc}
-				\label{tab:pc_flash}
-				\toprule
-				a & b\\\\
-				\midrule 
-				c & d\\\\
-				\bottomrule
+		\caption{\textbf{${0}}} %标题
+		\label{tab:${2}}
+		\centering %把表居中
+		\begin{tabular}{${1}} %四个c代表该表一共四列，内容全部居中
+			\toprule %第一道横线
+			Item1 & Item2 & Item3 & Item4 \\\\
+			\midrule %第二道横线 
+			Data1 & Data2 & Data3 & Data4 \\\\
+			\bottomrule %第三道横线
 		\end{tabular}
 	\end{table}
 
