@@ -61,6 +61,9 @@ alias gbD='git branch --delete --force'
 alias gitlog='git log --all --graph --pretty=format:"%Cred%h%Creset %C(bold blue)%an%Creset %s %Cgreen(%cr) %Creset" --abbrev-commit'
 eval $(thefuck --alias)
 alias pst="cd ~/Developer/git_repos/SourceFiles/hexo-site/source/_posts/"
+alias rvgcc="riscv64-unknown-elf-gcc -march=rv32g -mabi=ilp32"
+alias rvgccc="riscv64-unknown-elf-gcc -march=rv32gc -mabi=ilp32"
+alias rvobjdump="riscv64-unknown-elf-objdump"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -85,13 +88,12 @@ export CPLUS_INCLUDE_PATH=/usr/include/c++/11:$CPLUS_INCLUDE_PATH
 export PATH=~/.cargo/bin:$PATH
 
 # YSYX
-export NPC_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/npc
-export NVBOARD_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/nvboard
-export NEMU_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/nemu
-export AM_HOME=/home/fujie/Developer/git_repos/ysyx/ysyx-workbench/abstract-machine
+export NPC_HOME=/home/fujie/Developer/git_repos/chipDesign/ics2023/npc
+export NEMU_HOME=/home/fujie/Developer/git_repos/chipDesign/ics2023/nemu
+export AM_HOME=/home/fujie/Developer/git_repos/chipDesign/ics2023/abstract-machine
 
 # my hobby
-alias make="make -j `nproc` "
+# alias make="make -j `nproc` "
 alias vim="nvim"
 
 # ssh-agent connect
@@ -105,3 +107,7 @@ alias iserver="ssh jie@10.233.10.80" # connect server in internal networ
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 source ~/.profile
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
