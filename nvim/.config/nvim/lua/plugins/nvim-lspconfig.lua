@@ -85,8 +85,13 @@ return {
           capabilities = capabilities,
         })
       end,
-      ["python"] = function()
+      ["pyright"] = function()
         lspconfig["pyright"].setup({
+          capabilities = capabilities,
+        })
+      end,
+      ["gopls"] = function()
+        lspconfig["gopls"].setup({
           capabilities = capabilities,
         })
       end,

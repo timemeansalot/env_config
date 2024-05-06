@@ -51,7 +51,8 @@ return {
         "ruff-lsp",
         "pyright",
         -- golang related tools
-        "gopls",
+        "gopls", -- go lsp
+        "go-debug-adapter", -- go dap
       },
     })
   end,
