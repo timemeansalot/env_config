@@ -170,6 +170,10 @@ alias gcb='git checkout -b'
 alias gbd='git branch --delete'
 alias gbD='git branch --delete --force'
 alias gitlog='git log --graph --oneline'  
+alias gd='git diff'
+alias ta='tmux attach-session -t'
+alias tl='tmux ls'
+alias tn='tmux new -s'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

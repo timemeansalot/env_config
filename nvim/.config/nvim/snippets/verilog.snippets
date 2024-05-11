@@ -1,6 +1,8 @@
 # module
 snippet mod "module" b 
 	module ${1}(
+	  input wire clk,
+		input wire resetn,
 		${2}
 	);
 		${0}
@@ -50,11 +52,11 @@ snippet clk "generator clock" b
 # clock generator
 snippet genv "get generator" b 
 	parameter N=4;	
-	genvar i;
+	genvar ${1};
 	generate 
-		for (i=0;i<N;i=i+1) begin ${1} 
+		for (${1}=0;${1}<N;${1}=${1}+1) begin ${2} 
 		    // logic here
-			${2}	
+			${0}	
 		end
 	endgenerate
 
@@ -81,6 +83,52 @@ snippet ini "initial block" b
 
 # implementation 
 snippet imp "get waveforms" b 
-	// =========================================================================
-	// ============================ implementation =============================
-	// =========================================================================
+	// ======================================================
+	// ================= implementation =====================
+	// ======================================================
+
+# variables
+snippet var "get waveforms" b 
+	// ======================================================
+	// =================== variables=== =====================
+	// ======================================================
+
+
+# case stagements
+snippet tb "testbench" b 
+	`include "${1}.v"
+	module ${1}_tb();
+
+	reg clk;
+	reg resetn;
+	${2}
+	parameter TIME_PERIOD=10;
+
+	initial begin
+		clk = 1'b0;
+		forever #(TIME_PERIOD/2) clk=~clk;
+	end
+
+	initial begin
+		resetn = 1'b0;
+		#10 resetn = 1'b1;
+	end
+		
+	initial begin
+		#20
+	end
+
+	/* dump waveform */
+	initial begin
+		\$dumpfile("./wave/wave.vcd");
+		\$dumpvars(0, ${1}_tb);
+		#10000 \$finish;
+	end
+
+
+	${1} u_${1}(
+		.clk(clk),
+		.resetn(resetn),
+	);
+
+	endmodule
