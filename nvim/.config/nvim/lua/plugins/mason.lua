@@ -35,24 +35,28 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
+        -- bash, shell
+        "shfmt",
         -- lua related tools
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
+        "lua-language-server",
+        -- python related tools
+        "pyright", -- python lsp
         "isort", -- python formatter
         "black", -- python formatter
         "pylint",
-        "eslint_d",
-        "shfmt",
-        "lua-language-server",
-        -- python related tools
-        "black",
         "debugpy",
         "mypy",
         "ruff-lsp",
-        "pyright",
         -- golang related tools
         "gopls", -- go lsp
         "go-debug-adapter", -- go dap
+        "goimports",
+        "gofumpt",
+        -- rust
+        "rust-analyzer", -- rust lsp
+        "codelldb",
       },
     })
   end,

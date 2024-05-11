@@ -70,6 +70,6 @@ local catppuccin = {
     vim.cmd([[colorscheme catppuccin]]) -- use vim.cmd api to use this colorscheme
   end,
 }
-return tokyonight
+return gruvbox
 -- return gruvbox
 -- return catppuccin

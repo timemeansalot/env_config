@@ -11,9 +11,10 @@ return {
         python = "python3 -u",
         go = "go run",
         rust = {
-          "cd $dir &&",
-          "rustc $fileName &&",
-          "$dir/$fileNameWithoutExt",
+          "cargo run",
+          -- "cd $dir &&",
+          -- "rustc $fileName &&",
+          -- "$dir/$fileNameWithoutExt",
         },
         -- TODO: add C config here
         -- c = function(...)
