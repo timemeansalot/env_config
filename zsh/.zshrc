@@ -64,6 +64,7 @@ alias pst="cd ~/Developer/git_repos/SourceFiles/hexo-site/source/_posts/"
 alias rvgcc="riscv64-unknown-elf-gcc -march=rv32g -mabi=ilp32"
 alias rvgccc="riscv64-unknown-elf-gcc -march=rv32gc -mabi=ilp32"
 alias rvobjdump="riscv64-unknown-elf-objdump"
+alias solar="ssh jie@solar-2.s.cysic.work -p 2223"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
