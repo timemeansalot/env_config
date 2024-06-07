@@ -11,6 +11,7 @@ local tokyonight = {
     vim.cmd([[colorscheme tokyonight]]) -- use vim.cmd api to use this colorscheme
   end,
 }
+
 local gruvbox = {
   "ellisonleao/gruvbox.nvim",
   opts = {
@@ -67,9 +68,9 @@ local catppuccin = {
     },
   },
   config = function()
-    vim.cmd([[colorscheme catppuccin]]) -- use vim.cmd api to use this colorscheme
+    vim.cmd([[colorscheme catppuccin-latte]]) -- use vim.cmd api to use this colorscheme
   end,
 }
 -- return gruvbox
--- return gruvbox
 return catppuccin
+-- return tokyonight

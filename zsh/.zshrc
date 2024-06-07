@@ -65,6 +65,9 @@ alias rvgcc="riscv64-unknown-elf-gcc -march=rv32g -mabi=ilp32"
 alias rvgccc="riscv64-unknown-elf-gcc -march=rv32gc -mabi=ilp32"
 alias rvobjdump="riscv64-unknown-elf-objdump"
 alias solar="ssh jie@solar-2.s.cysic.work -p 2223"
+alias ta="tmux attach-session -t"
+alias tn="tmux new -s"
+alias tl="tmux ls"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
