@@ -69,7 +69,7 @@ local catppuccin = {
   },
   config = function()
     -- vim.cmd([[colorscheme catppuccin-latte]]) -- use vim.cmd api to use this colorscheme
-    vim.cmd([[colorscheme catppuccin-mocha]]) -- use vim.cmd api to use this colorscheme
+    vim.cmd([[colorscheme tokyonight]]) -- use vim.cmd api to use this colorscheme
   end,
 }
 -- return gruvbox
