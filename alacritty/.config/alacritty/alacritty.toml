@@ -54,7 +54,7 @@ padding.x = 10
 padding.y = 10
 
 [font]
-size = 18 
+size = 23
 normal.family = "0xProtoNerdFont"
 
 [shell]

@@ -3,18 +3,13 @@ return {
   config = function()
     require("code_runner").setup({
       filetype = {
-        -- java = {
-        --   "cd $dir &&",
-        --   "javac $fileName &&",
-        --   "java $fileNameWithoutExt",
-        -- },
         python = "python3 -u",
         go = "go run",
         rust = {
-          "cargo run",
-          -- "cd $dir &&",
-          -- "rustc $fileName &&",
-          -- "$dir/$fileNameWithoutExt",
+          -- "cargo run --bin",
+          "cd $dir &&",
+          "rustc $fileName &&",
+          "$dir/$fileNameWithoutExt",
         },
         -- TODO: add C config here
         -- c = function(...)
