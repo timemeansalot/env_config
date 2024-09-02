@@ -1,51 +1,119 @@
-# config for Linux only
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions web-search)
+
 source $ZSH/oh-my-zsh.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# nvm using china repo
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
+# User configuration
 
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# Java for Ubuntu 
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH:.
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/fujie/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/fujie/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/fujie/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/fujie/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-# conda activate chisel
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
-# gtkwave & Perl Switch: allow `gtkwave` command works fine in terminal
-PATH="/Users/fujie/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/fujie/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/fujie/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/fujie/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/fujie/perl5"; export PERL_MM_OPT;
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias gktwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
-alias proxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+# fujie's config 
+
+alias proxy="export https_proxy=http://10.233.10.2:20171 http_proxy=http://10.233.10.2:20171 all_proxy=socks5://10.233.10.2:20171"
 alias unproxy="unset http_proxy && unset https_proxy && unset all_proxy"
+alias uppp='sudo apt-get -o Acquire::http::proxy="http://10.233.10.2:20171/" update && sudo apt-get -o Acquire::http::proxy="http://10.233.10.2:20171/" upgrade -y'
+alias work="cd /Users/fujie/Desktop/Developer/git_repos"
+alias rtl="cd /Users/fujie/Desktop/Developer/git_repos/FAST_INTR_CPU/src/rtl"
 alias c="clear"
 alias szsh='source ~/.zshrc'
 alias gs='git status'
@@ -58,59 +126,93 @@ alias gch='git checkout'
 alias gcb='git checkout -b'
 alias gbd='git branch --delete'
 alias gbD='git branch --delete --force'
-alias gitlog='git log --all --graph --pretty=format:"%Cred%h%Creset %C(bold blue)%an%Creset %s %Cgreen(%cr) %Creset" --abbrev-commit'
-eval $(thefuck --alias)
-alias pst="cd ~/Developer/git_repos/SourceFiles/hexo-site/source/_posts/"
-alias rvgcc="riscv64-unknown-elf-gcc -march=rv32g -mabi=ilp32"
-alias rvgccc="riscv64-unknown-elf-gcc -march=rv32gc -mabi=ilp32"
-alias rvobjdump="riscv64-unknown-elf-objdump"
-alias solar="ssh jie@solar-2.s.cysic.work -p 2223"
+alias gitlog='git log --graph --oneline'  
+alias gd='git diff'
+alias nvim='/home/jie/apps/nvim/bin/nvim'
 alias ta="tmux attach-session -t"
-alias tn="tmux new -s"
 alias tl="tmux ls"
+alias tn="tmux new -s"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This load nvm 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+# ########## copy from cannan
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+#export PATH=$PATH:/home/canaan/tool/go/bin
+# export PATH=$PATH:/usr/local/cuda/bin:/usr/local/cuda/bin/nvcc
+export PATH=/home/jie/.cargo/bin:$PATH
+export PATH=/home/jie/go/bin:$PATH
+export GOPATH=$HOME/go
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/bin:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu
+# export CUDA_HOME=/usr/local/cuda/lib64/
+
+
+
+# right path
+# right path
+# right path
+# right path
+# /home/jie/miniconda3/bin:/home/jie/miniconda3/condabin:
+# /home/jie/go/bin:
+# /home/jie/.cargo/bin:
+# /home/jie/.nvm/versions/node/v22.1.0/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:
+# /home/jie/.dotnet/tools:/usr/local/cuda/bin:/usr/local/cuda/bin/nvcc:
+# /home/canaan/perTest/gnark/icicle/build:.local/bin
+
+# export CGO_LDFLAGS="-L/home/canaan/perTest/gnark/icicle/goicicle"
+# export CGO_LDFLAGS="-L/home/jie/icicle_pro/icicle/icicle/build/lib/"
+unset CGO_LDFLAGS
+
+export RUSTUP_DIST_SERVER="https://rsproxy.cn"
+export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
+# export CPATH=$CPATH:/usr/local/cuda/targets/x86_64-linux/include
+export LIBRARY_PATH=$LIBRARY_PATH
+########## copy from cannan
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# color scheme, Ubuntu Only
-# eval `dircolors /home/fujie/.dir_colors/dircolors`
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
-# long arch
-# export CHIPLAB_HOME=/home/fujie/Developer/git_repos/chiplab
-# export PATH=${CHIPLAB_HOME}/toolchains/loongarch32r-linux-gnusf-2022-05-20/bin/:$PATH 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jie/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/jie/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jie/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/jie/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
-# RISC-V
-export RISCV_HOME=/opt/riscv
-export PATH=$RISCV_HOME/bin:$PATH
-# export CPATH=.:/usr/include/c++/11/:/usr/include/SDL2/:/usr/local/share/verilator/include/:$CPATH
-export CPATH=~/Developer/git_repos/chipDesign/verilator/include/:$CPATH
-export CPATH=$NEMU_HOME/include/:$NEMU_HOME/src/isa/riscv32/include/:$CPATH
-export CPLUS_INCLUDE_PATH=/usr/include/c++/11:$CPLUS_INCLUDE_PATH
+. "$HOME/.cargo/env" # cargo
 
-# nvim executable
-export PATH=~/.cargo/bin:$PATH
+if [ -e /home/jie/.nix-profile/etc/profile.d/nix.sh ]; then . /home/jie/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-# YSYX
-export NPC_HOME=/home/fujie/Developer/git_repos/chipDesign/ics2023/npc
-export NEMU_HOME=/home/fujie/Developer/git_repos/chipDesign/ics2023/nemu
-export AM_HOME=/home/fujie/Developer/git_repos/chipDesign/ics2023/abstract-machine
+# zksync
+export ZKSYNC_HOME=/home/jie/Developer/zksync/zksync-era
+export PATH=$ZKSYNC_HOME/bin:$PATH
 
-# my hobby
-# alias make="make -j `nproc` "
-alias vim="nvim"
+# cuda
+export CUDA_HOME=/usr/local/cuda
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PAT
+export PATH=$CUDA_HOME/bin:$PATH
+export BELLMAN_CUDA_DIR=/home/jie/Developer/zksync/era-bellman-cuda
 
-# ssh-agent connect
-eval `ssh-agent -s` > /dev/null
-eval `ssh-add ~/.ssh/time >/dev/null 2>&1` > /dev/null 2>&1
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
-# Vivado
-alias eserver="ssh jie@0.sh.cn.l.cysic.work -p 2222"
-alias iserver="ssh jie@10.233.10.80" # connect server in internal networ
-fpath+=${ZDOTDIR:-~}/.zsh_functions
 
-source ~/.profile
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# ssh 
+# ssh 
+# set SSH_AUTH_SOCK env var to a fixed value
+export SSH_AUTH_SOCK=~/.ssh/ssh-agent.sock
+# test whether $SSH_AUTH_SOCK is valid
+ssh-add -l 2>/dev/null >/dev/null
+# if not valid, then start ssh-agent using $SSH_AUTH_SOCK
+[ $? -ge 2 ] && ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
