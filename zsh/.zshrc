@@ -211,3 +211,5 @@ export PATH=/opt/homebrew/bin/iverilog:$PATH
 
 # rust and cargo
 source ~/.cargo/env
+alias git='LANG=en_GB git'
+export LANG="en_US.UTF-8" # (updated)
