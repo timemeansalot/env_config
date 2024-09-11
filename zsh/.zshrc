@@ -126,93 +126,13 @@ alias gch='git checkout'
 alias gcb='git checkout -b'
 alias gbd='git branch --delete'
 alias gbD='git branch --delete --force'
-alias gitlog='git log --graph --oneline'  
-alias gd='git diff'
-alias nvim='/home/jie/apps/nvim/bin/nvim'
+alias gitlog='git log --all --graph --pretty=format:"%Cred%h%Creset %C(bold blue)%an%Creset %s %Cgreen(%cr) %Creset" --abbrev-commit'
+eval $(thefuck --alias)
+alias pst="cd ~/Developer/git_repos/SourceFiles/hexo-site/source/_posts/"
+alias rvgcc="riscv64-unknown-elf-gcc -march=rv32g -mabi=ilp32"
+alias rvgccc="riscv64-unknown-elf-gcc -march=rv32gc -mabi=ilp32"
+alias rvobjdump="riscv64-unknown-elf-objdump"
+alias solar="ssh jie@solar-2.s.cysic.work -p 2223"
+alias solar_direct="ssh jie@139.227.46.131 -p 2223"
 alias ta="tmux attach-session -t"
 alias tl="tmux ls"
-alias tn="tmux new -s"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This load nvm 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-# ########## copy from cannan
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-#export PATH=$PATH:/home/canaan/tool/go/bin
-# export PATH=$PATH:/usr/local/cuda/bin:/usr/local/cuda/bin/nvcc
-export PATH=/home/jie/.cargo/bin:$PATH
-export PATH=/home/jie/go/bin:$PATH
-export GOPATH=$HOME/go
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/bin:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu
-# export CUDA_HOME=/usr/local/cuda/lib64/
-
-
-
-# right path
-# right path
-# right path
-# right path
-# /home/jie/miniconda3/bin:/home/jie/miniconda3/condabin:
-# /home/jie/go/bin:
-# /home/jie/.cargo/bin:
-# /home/jie/.nvm/versions/node/v22.1.0/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:
-# /home/jie/.dotnet/tools:/usr/local/cuda/bin:/usr/local/cuda/bin/nvcc:
-# /home/canaan/perTest/gnark/icicle/build:.local/bin
-
-# export CGO_LDFLAGS="-L/home/canaan/perTest/gnark/icicle/goicicle"
-# export CGO_LDFLAGS="-L/home/jie/icicle_pro/icicle/icicle/build/lib/"
-unset CGO_LDFLAGS
-
-export RUSTUP_DIST_SERVER="https://rsproxy.cn"
-export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
-# export CPATH=$CPATH:/usr/local/cuda/targets/x86_64-linux/include
-export LIBRARY_PATH=$LIBRARY_PATH
-########## copy from cannan
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jie/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/jie/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/jie/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/jie/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-. "$HOME/.cargo/env" # cargo
-
-if [ -e /home/jie/.nix-profile/etc/profile.d/nix.sh ]; then . /home/jie/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
-# zksync
-export ZKSYNC_HOME=/home/jie/Developer/zksync/zksync-era
-export PATH=$ZKSYNC_HOME/bin:$PATH
-
-# cuda
-export CUDA_HOME=/usr/local/cuda
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64:/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PAT
-export PATH=$CUDA_HOME/bin:$PATH
-export BELLMAN_CUDA_DIR=/home/jie/Developer/zksync/era-bellman-cuda
-
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
-
-
-# ssh 
-# ssh 
-# set SSH_AUTH_SOCK env var to a fixed value
-export SSH_AUTH_SOCK=~/.ssh/ssh-agent.sock
-# test whether $SSH_AUTH_SOCK is valid
-ssh-add -l 2>/dev/null >/dev/null
-# if not valid, then start ssh-agent using $SSH_AUTH_SOCK
-[ $? -ge 2 ] && ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
