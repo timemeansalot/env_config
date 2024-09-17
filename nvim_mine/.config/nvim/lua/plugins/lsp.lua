@@ -52,7 +52,8 @@ return {
         },
       }
       -- lsp for rust
-      lspconfig.rust.setup{}
+      -- lspconfig.rust.setup{}
+      require("lspconfig").rust_analyzer.setup{}
     end,
   },
   {
