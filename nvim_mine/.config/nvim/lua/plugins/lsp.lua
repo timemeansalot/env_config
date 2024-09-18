@@ -44,15 +44,15 @@ return {
       -- lsp for rust
       -- lspconfig.rust.setup{}
       require("lspconfig").rust_analyzer.setup {
-        filetypes = "rust",
+        -- filetypes = "rust",
         capabilities = capabilities,
-        settings = {
-          ['rust-analyzer'] = {
-            diagnostics = {
-              enable = false,
-            }
-          }
-        }
+        -- settings = {
+        --   ['rust-analyzer'] = {
+        --     diagnostics = {
+        --       enable = false,
+        --     }
+        --   }
+        -- }
       }
     end,
   },
