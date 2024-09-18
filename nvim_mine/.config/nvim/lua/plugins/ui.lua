@@ -43,14 +43,19 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     opts = {
       options = {
+        mode = "buffers",
         numbers = "ordinal",
         show_buffer_close_icons = false,
         color_icons = false,
+        left_trunc_marker = '',
+        right_trunc_marker = '',
+        hover = {
+          enabled = true,
+          delay = 200,
+          reveal = { 'close' }
+        },
       },
     },
-    config = function()
-      vim.opt.termguicolors = true
-    end,
     keys = {
       { "<leader>bp", "<cmd>BufferLineTogglePin<cr>",   desc = "pin buffer" },
       { "<S-h>",      "<cmd>BufferLineCyclePrev<cr>",   desc = "go to left hand buffer" },
@@ -68,7 +73,7 @@ return {
     config = function()
       require("tokyonight").setup({
         style = "day",
-        transparent = "transparent",
+        -- transparent = "transparent",
       })
       vim.cmd("colorscheme tokyonight")
     end
