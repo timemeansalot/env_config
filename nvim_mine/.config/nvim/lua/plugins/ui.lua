@@ -48,6 +48,9 @@ return {
         color_icons = false,
       },
     },
+    config = function()
+      vim.opt.termguicolors = true
+    end,
     keys = {
       { "<leader>bp", "<cmd>BufferLineTogglePin<cr>",   desc = "pin buffer" },
       { "<S-h>",      "<cmd>BufferLineCyclePrev<cr>",   desc = "go to left hand buffer" },
