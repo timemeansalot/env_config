@@ -125,6 +125,9 @@ return {
           end,
         }),
       },
+      completion = {
+        autocompletion = false, -- don't choose the first item automatically
+      }
     })
   end,
 }
