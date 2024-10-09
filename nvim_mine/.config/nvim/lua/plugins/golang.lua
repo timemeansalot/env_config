@@ -37,9 +37,9 @@ return {
     build = function()
       vim.cmd [[silent! GoInstallDeps]]
     end,
-    keys = {
-      { "<leader>gsj", "<cmd>GoTagAdd json<cr>", desc = "add json struct tags" },
-      { "<leader>gsy", "<cmd>GoTagAdd yaml<cr>", desc = "add yaml struct tags" },
-    }
+    -- keys = {
+    --   { "<leader>gsj", "<cmd>GoTagAdd json<cr>", desc = "add json struct tags" },
+    --   { "<leader>gsy", "<cmd>GoTagAdd yaml<cr>", desc = "add yaml struct tags" },
+    -- }
   },
 }

@@ -33,3 +33,4 @@ vim.api.nvim_create_autocmd("BufEnter",
 
 -- always draw the sign column, useful for plugin like lspsaga
 vim.opt.signcolumn = "yes"
+vim.opt.termguicolors = true

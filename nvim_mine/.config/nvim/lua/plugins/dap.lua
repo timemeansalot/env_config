@@ -21,27 +21,6 @@ return {
           repl = "r",
           toggle = "t"
         },
-        -- layouts = {
-        --   {
-        --     elements = {
-        --       -- Elements can be strings or table with id and size keys.
-        --       { id = "scopes", size = 0.25 },
-        --       "breakpoints",
-        --       "stacks",
-        --       "watches",
-        --     },
-        --     size = 40,
-        --     position = "right",
-        --   },
-        --   {
-        --     elements = {
-        --       -- "repl",
-        --       "console",
-        --     },
-        --     size = 10,
-        --     position = "bottom",
-        --   },
-        -- },
         floating = {
           max_height = nil,  -- These can be integers or a float between 0 and 1.
           max_width = nil,   -- Floats will be treated as percentage of your screen.
@@ -134,7 +113,7 @@ return {
       -- end
 
       local dap = require("dap")
-      -- require('dap.ext.vscode').load_launchjs(nil, { cppdbg = { 'cpp' } }) -- TODO: check this for luanch.json file
+      require("dap.ext.vscode").load_launchjs(nil, { codelldb = { "c", "cpp", "rust" }})
       -- config debug server for c++/c
       dap.adapters.codelldb = {
         type = 'server',
