@@ -1,0 +1,106 @@
+{
+  "workbench.colorTheme": "Visual Studio Light",
+  "workbench.preferredDarkColorTheme": "Visual Studio Light",
+  "workbench.preferredHighContrastColorTheme": "Visual Studio Light",
+  "workbench.preferredHighContrastLightColorTheme": "Visual Studio Light",
+  "window.autoDetectColorScheme": true,
+  "zenMode.centerLayout": true,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.showTabs": "single",
+  "editor.linkedEditing": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": " CaskaydiaCoveNerdFont",
+  // "editor.fontFamily": "JetBrainsMonoNL-LightItalic",
+  // "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 22,
+  "editor.fontLigatures": true,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "explicit",
+    "source.removeUnused": "explicit"
+  },
+  "editor.formatOnSave": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.profiles.linux": {
+    "tmux-shell": {
+      "path": "tmux",
+      "args": [
+        "new-session",
+        "-A",
+        "-s",
+        "vscode:${workspaceFolder}"
+      ]
+    }
+  },
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.ignoreRecommendations": false,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vim.useSystemClipboard": true,
+  "vim.foldfix": true,
+  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "white",
+  "vim.leader": "<space>",
+  // "vim.visualModeKeyBindings": [
+  //   {
+  //     "before": [
+  //       "<"
+  //     ],
+  //     "after": [
+  //       "<gv"
+  //     ]
+  //   }
+  // ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
+  ],
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.minimap.autohide": true,
+  "projectManager.git.baseFolders": [
+    "$home/Developer"
+  ],
+  "projectManager.sortList": "Recent",
+  "workbench.activityBar.location": "hidden",
+}

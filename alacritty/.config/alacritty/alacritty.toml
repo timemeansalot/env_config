@@ -18,7 +18,8 @@ blur = true
 
 [font]
 size = 21
-normal.family = "0xProtoNerdFont"
+normal.family = "CaskaydiaCoveNerdFont"
+# normal.family = "0xProtoNerdFont"
 # normal.family = "0xJeBrainsMono"
 
 [shell]
