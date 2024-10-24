@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 vim.keymap.set("i", "jk", "<ESC>", { desc = "exit insert mode" })
-vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "save file" })
+vim.keymap.set("n", "<leader>s", "<cmd>w<cr>", { desc = "save file" })
 vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<cr>", { desc = "no highlight search" })
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy plugin manager panel" })
 
