@@ -1,8 +1,5 @@
 {
   "workbench.colorTheme": "Visual Studio Light",
-  "workbench.preferredDarkColorTheme": "Visual Studio Light",
-  "workbench.preferredHighContrastColorTheme": "Visual Studio Light",
-  "workbench.preferredHighContrastLightColorTheme": "Visual Studio Light",
   "window.autoDetectColorScheme": true,
   "zenMode.centerLayout": true,
   "zenMode.hideLineNumbers": false,
