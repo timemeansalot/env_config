@@ -67,6 +67,14 @@ return {
     }
   },
   {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme catppuccin-latte")
+    end
+  },
+  {
     -- set colorscheme
     "folke/tokyonight.nvim",
     proirity = 1000,
@@ -75,7 +83,6 @@ return {
         style = "day",
         transparent = "transparent",
       })
-      vim.cmd("colorscheme tokyonight")
     end
   },
   {
