@@ -102,12 +102,9 @@ export AM_HOME=/home/fujie/Developer/git_repos/chipDesign/ics2023/abstract-machi
 # alias make="make -j `nproc` "
 alias vim="nvim"
 
-# ssh-agent connect
-eval `ssh-agent -s` > /dev/null
-eval `ssh-add ~/.ssh/time >/dev/null 2>&1` > /dev/null 2>&1
-
-source ~/.profile
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# zkstack completion
+source "/home/fujie/.zsh/completion/_zkstack.zsh"
