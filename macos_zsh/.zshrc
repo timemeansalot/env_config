@@ -145,6 +145,7 @@ PERL_MM_OPT="INSTALL_BASE=/Users/fujie/perl5"; export PERL_MM_OPT;
 alias pst="cd ~/Developer/git_repos/SourceFiles/hexo-site/source/_posts/"
 alias eserver="ssh jie@0.sh.cn.l.cysic.work -p 2222" # connect cysic server in external networ
 alias iserver="ssh jie@10.233.10.80" # connect cysic server in internal networ
+alias lenovo="ssh fujie@192.168.1.10"
 alias solar="ssh jie@solar-2.s.cysic.work -p 2223"
 alias solar_direct="ssh jie@139.227.46.131 -p 2223"
 alias aws="ssh ubuntu@3.101.15.174 -i ~/.ssh/ci-dispatcher.pem"
