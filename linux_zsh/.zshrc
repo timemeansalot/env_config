@@ -4,15 +4,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions web-search)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions web-search direnv)
 source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # nvm using china repo
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
+export NVM_NODEJS_ORG_MIRROR=http://nodejs.org/dist
+# export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+# export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
 
 
 # Java for Ubuntu 
@@ -108,3 +109,25 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # zkstack completion
 source "/home/fujie/.zsh/completion/_zkstack.zsh"
+
+# lenovo cuda 
+export PATH=/usr/local/cuda/bin/:$PATH
+
+# golang 
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/home/fujie/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+eval "$(direnv hook zsh)"
+
+
+# ssh
+emulate ksh -c  "source /etc/profile.d/ssh-find-agent.sh"
+ssh-add -l >&/dev/null || ssh-find-agent -a || eval $(ssh-agent) > /dev/null
