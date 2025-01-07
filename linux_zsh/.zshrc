@@ -131,3 +131,7 @@ eval "$(direnv hook zsh)"
 # ssh
 emulate ksh -c  "source /etc/profile.d/ssh-find-agent.sh"
 ssh-add -l >&/dev/null || ssh-find-agent -a || eval $(ssh-agent) > /dev/null
+
+# celestia
+emulate ksh -c  "source /etc/profile.d/celestia_cmp.sh"
+source /home/fujie/.zshenv
