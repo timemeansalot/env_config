@@ -108,7 +108,7 @@ return {
         -- ["<Tab>"] = cmp.mapping.select_next_item(),
         -- ["<S-Tab>"] = cmp.mapping.select_prev_item(),
         ["<C-u>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-d>"] = cmp.mapping.scroll_docs(4),
+        ["<C-b>"] = cmp.mapping.scroll_docs(4),
         ["<C-c>"] = cmp.mapping.complete(), -- show completion suggestions
         ["<C-e>"] = cmp.mapping.abort(),    -- show completion suggestions
         -- ["<CR>"] = cmp.mapping.confirm({ select = false }), -- show completion suggestions
