@@ -81,6 +81,9 @@ return {
         },
       },
     }
+    vim.keymap.set('n', '<leader>ui', function()
+      require('dapui').toggle()
+    end, { desc = 'dapui' })
 
     -- Change breakpoint icons
     vim.api.nvim_set_hl(0, 'DapBreak', { fg = '#e51400' })
@@ -110,7 +113,7 @@ return {
     dap.adapters.codelldb = {
       type = 'executable',
       name = 'codelldb',
-      command = '/Users/fujie/.local/share/nvim/mason/bin/codelldb',
+      command = vim.fn.expand '$HOME' .. '/.local/share/nvim/mason/bin/codelldb',
       -- args = { '--port', '${port}' },
     }
     dap.configurations.cpp = {
