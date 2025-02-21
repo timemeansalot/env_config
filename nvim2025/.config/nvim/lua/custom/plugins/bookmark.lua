@@ -37,14 +37,14 @@ return {
       desc = '[M]ark [L]ist',
     },
     {
-      '<leader>mc',
+      '<leader>mC',
       function()
         require('bookmarks').bookmark_clear_all()
       end,
       desc = '[M]ark [C]lear All',
     },
     {
-      '<leader>mC',
+      '<leader>mc',
       function()
         require('bookmarks').bookmark_clean()
       end,
