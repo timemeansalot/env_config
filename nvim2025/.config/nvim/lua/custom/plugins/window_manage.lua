@@ -23,6 +23,9 @@ return {
     keys = {
       { '<leader>wm', '<cmd>MaximizerToggle<CR>', desc = '[W]indow [M]aximize' },
     },
+    config = function()
+      vim.g.maximizer_set_default_mapping = 0
+    end,
   },
   {
     'anuvyklack/help-vsplit.nvim',
