@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build cpp debug",
+      "type": "shell",
+      "command": "clang++",
+      "args": ["-g", "-std=c++17", "-o", "main", "main.cpp"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$g++"],
+      "detail": "Compiler: clang++"
+    }
+  ]
+}

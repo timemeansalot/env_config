@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "debug rust",
+      "type": "codelldb",
+      "request": "launch",
+      "program": "{{_cursor_}}${workspaceFolderBasename}",
+      // "args": ["--job=scaler", "--config-path=./test_config.yaml"],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "build rust"
+    }
+  ]
+}
