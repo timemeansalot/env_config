@@ -18,6 +18,9 @@ return {
       width = 30,
     },
     filesystem = {
+      filtered_items = {
+        hide_dotfiles = false,
+      },
       window = {
         mappings = {
           ['<leader>e'] = 'close_window',
