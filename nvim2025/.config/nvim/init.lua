@@ -496,6 +496,12 @@ require('lazy').setup({
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-t>.
+          map('[d', function()
+            vim.diagnostic.goto_prev()
+          end, '[G]oto [D]efinition')
+          map(']d', function()
+            vim.diagnostic.goto_next()
+          end, '[G]oto [R]eferences')
           map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
           -- Find references for the word under your cursor.
@@ -855,12 +861,16 @@ require('lazy').setup({
     'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
-      -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-moon'
-
-      -- You can configure highlights by doing something like:
+      -- vim.cmd.colorscheme 'tokyonight-moon'
+      -- vim.cmd.hi 'Comment gui=none'
+    end,
+  },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'catppuccin-latte'
       vim.cmd.hi 'Comment gui=none'
     end,
   },
@@ -886,6 +896,28 @@ require('lazy').setup({
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
+      require('mini.move').setup {
+        -- Module mappings. Use `''` (empty string) to disable one.
+        mappings = {
+          -- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
+          left = '<S-h>',
+          right = '<S-l>',
+          down = '<S-j>',
+          up = '<S-k>',
+
+          -- Move current line in Normal mode
+          line_left = '<S-h>',
+          line_right = '<S-l>',
+          line_down = '<S-j>',
+          line_up = '<S-k>',
+        },
+
+        -- Options which control moving behavior
+        options = {
+          -- Automatically reindent selection during linewise vertical move
+          reindent_linewise = true,
+        },
+      }
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
@@ -915,9 +947,10 @@ require('lazy').setup({
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter-context',
-    },
+    -- TODO: Curry
+    -- dependencies = {
+    --   'nvim-treesitter/nvim-treesitter-context',
+    -- },
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
