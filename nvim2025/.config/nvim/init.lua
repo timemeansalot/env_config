@@ -861,8 +861,8 @@ require('lazy').setup({
     'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
-      -- vim.cmd.colorscheme 'tokyonight-moon'
-      -- vim.cmd.hi 'Comment gui=none'
+      vim.cmd.colorscheme 'tokyonight-day'
+      vim.cmd.hi 'Comment gui=none'
     end,
   },
   {
@@ -870,8 +870,8 @@ require('lazy').setup({
     name = 'catppuccin',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'catppuccin-latte'
-      vim.cmd.hi 'Comment gui=none'
+      -- vim.cmd.colorscheme 'catppuccin-latte'
+      -- vim.cmd.hi 'Comment gui=none'
     end,
   },
 
