@@ -9,8 +9,8 @@
 --     delete(functi*on calls)     dsf             function calls
 -- local str = |some text|     S'              local str = 'some text'
 return {
-  'hylechui/nvim-surround',
-  version = '*', -- Use for stability; omit to use `main` branch for the latest features
+  'kylechui/nvim-surround',
+  version = '^3.0.0', -- Use for stability; omit to use `main` branch for the latest features
   event = 'VeryLazy',
   config = function()
     require('nvim-surround').setup {
