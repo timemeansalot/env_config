@@ -496,13 +496,11 @@ require('lazy').setup({
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-t>.
-          map('[d', function()
-            vim.diagnostic.goto_prev()
-          end, '[G]oto [D]efinition')
-          map(']d', function()
-            vim.diagnostic.goto_next()
-          end, '[G]oto [R]eferences')
-          map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+          map('[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>', '[G]oto [D]efinition')
+          map(']d', '<cmd>Lspsaga diagnostic_jump_next<CR>', '[G]oto [D]efinition')
+          map('gd', '<cmd>Lspsaga goto_definition<CR>', '[G]oto [D]efinition')
+          map('gp', '<cmd>Lspsaga peek_definition<CR>', '[G]oto [D]efinition')
+          map('ga', '<cmd>Lspsaga code_action<CR>', '[G]oto [D]efinition')
 
           -- Find references for the word under your cursor.
           map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
