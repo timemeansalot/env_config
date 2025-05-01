@@ -170,7 +170,7 @@ vim.opt.scrolloff = 10
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('n', '<leader>ww', '<cmd>:w<CR>', { desc = 'save file' })
+vim.keymap.set('n', '<leader>s', '<cmd>:w<CR>', { desc = 'save file' })
 vim.keymap.set('i', 'jk', '<ESC>', { desc = 'exit insert mode' })
 vim.keymap.set('n', '<leader>L', '<cmd>:Lazy<cr>', { desc = 'open Lazy page' })
 vim.keymap.set('n', '<leader>M', '<cmd>:Mason<cr>', { desc = 'open Mason page' })
